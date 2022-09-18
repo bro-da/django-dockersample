@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('install dependecies') {
+      steps {
+        sh 'cd django-dockersample && pip install -r requirements.txt'
+      }
+    }
+
   }
 }
