@@ -8,7 +8,7 @@ pipeline {
  
 
   '''
-        sh 'cd /home/dev/temp/'
+        sh 'cd /home/dev/temp'
       }
     }
 
