@@ -8,11 +8,11 @@ pipeline {
  
 
   '''
-        sh 'cd temp '
+        sh 'cd /home/dev/temp/'
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         git(url: 'https://github.com/bro-da/django-dockersample', branch: 'master')
       }
