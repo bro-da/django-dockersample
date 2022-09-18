@@ -1,29 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('rebuilding docker directory') {
-      steps {
-        sh '''if [ -d /home/dev/temp/django-dockersample ]; then rm -Rf /home/dev/temp/django-dockersample; fi
-
- 
-
-  '''
-        sh 'cd /home/dev/temp'
-      }
-    }
-
     stage('error') {
       steps {
         git(url: 'https://github.com/bro-da/django-dockersample', branch: 'master')
       }
     }
 
-    stage('py venv') {
+    stage('source venv') {
       steps {
-        sh '''python3 -m venv venv
-
-
-| source venv/bin/activate'''
+        sh 'cd django-dockersample && python3 -m venv venv && source venv/bin/activate'
       }
     }
 
