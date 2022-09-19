@@ -1,10 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('checkout') {
+    stage('git clone and cd') {
       steps {
-        git(url: 'https://github.com/bro-da/django-dockersample', branch: 'master')
-        sh 'cd django-dockersample'
+        sh 'git clone https://github.com/bro-da/django-dockersample && cd django-dockersample '
       }
     }
 
