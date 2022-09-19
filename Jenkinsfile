@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('git clone and cd') {
       steps {
-        sh 'if [ -d "$WORKING_DIR" ]; then rm -Rf $WORKING_DIR; fi && git clone https://github.com/bro-da/django-dockersample && cd django-dockersample '
+        sh 'if [ -d  django-dockersample]; then rm -Rf django-dockersample; fi && git clone https://github.com/bro-da/django-dockersample && cd django-dockersample '
       }
     }
 
