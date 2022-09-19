@@ -9,7 +9,7 @@ pipeline {
 
     stage('docker build') {
       steps {
-        sh 'sudo docker-compose run web django-admin startproject composeexample .'
+        sh 'docker-compose run web django-admin startproject composeexample .'
       }
     }
 
